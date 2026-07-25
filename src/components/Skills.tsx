@@ -15,7 +15,7 @@ const skillGroups = [
   {
     title: "Systems & Tools",
     icon: FaTools,
-    skills: ["Operating Systems", "Git", "GitHub", "Postman", "VS Code"]
+    skills: ["Operating Systems", "Git", "GitHub", "VS Code"]
   }
 ];
 

@@ -8,7 +8,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 relative z-10">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -18,7 +18,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-black text-white glow-text mb-6">Professional Experience</h2>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -27,17 +27,28 @@ export default function Experience() {
         >
           {/* Background Glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-          
+
           <div className="relative z-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
               <div>
                 <h3 className="text-3xl md:text-4xl font-black text-white mb-2">Reliance Industries Limited</h3>
                 <div className="text-xl font-bold glow-text">AI Engineering Intern</div>
               </div>
-              <div className="flex flex-col md:items-end gap-2">
-                <span className="glass-panel px-4 py-1.5 rounded-full text-sm font-bold text-white border-primary/30">May – June 2026</span>
-                <span className="glass-panel px-4 py-1.5 rounded-full text-sm font-bold text-muted border-purple/30">Vadodara, Gujarat</span>
+              <div className="space-y-1">
+                <p className="text-white font-semibold text-lg">
+                  May – June 2026
+                </p>
+
+                <p className="text-slate-400 font-semibold">
+                  Vadodara, Gujarat
+                </p>
               </div>
+              {/*<div className="flex flex-col md:items-end gap-2">
+                <span className="font-boldtext-white">May – June 2026</span>
+                <span className="font-bold text-gray-300">
+                  Vadodara, Gujarat
+                </span>
+              </div>*/}
             </div>
 
             <p className="text-muted text-lg leading-relaxed mb-8 max-w-4xl">
@@ -73,9 +84,6 @@ export default function Experience() {
               <button onClick={() => setModalOpen(true)} className="flex items-center gap-2 bg-gradient-to-r from-primary to-purple px-6 py-3 rounded-full font-bold text-white hover:scale-105 transition-transform shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                 <FaAward /> View Certificate
               </button>
-              <a href="#projects" className="flex items-center gap-2 glass-panel px-6 py-3 rounded-full font-bold text-white hover:bg-white/10 transition-colors border-white/20">
-                <FaExternalLinkAlt size={14} /> View Projects
-              </a>
             </div>
           </div>
         </motion.div>
@@ -84,19 +92,19 @@ export default function Experience() {
       {/* Modal */}
       <AnimatePresence>
         {modalOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-dark/80 backdrop-blur-sm"
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               className="glass-panel p-8 rounded-2xl w-full max-w-lg relative"
             >
-              <button 
+              <button
                 onClick={() => setModalOpen(false)}
                 className="absolute top-4 right-4 text-muted hover:text-white transition-colors"
               >

@@ -20,7 +20,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 md:px-12 lg:px-24 relative z-10 mb-20">
       <div className="max-w-4xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,60 +33,65 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-panel p-8 md:p-12 rounded-3xl"
+          className="glass-panel p-8 md:p-12 rounded-xl"
         >
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-sm font-bold text-muted">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  required 
+                <input
+                  type="text"
+                  id="name"
+                  required
                   className="bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
-                  placeholder="John Doe"
+                  placeholder="Enter your name"
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-sm font-bold text-muted">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  required 
+                <input
+                  type="email"
+                  id="email"
+                  required
                   className="bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="Enter your email"
                 />
               </div>
             </div>
-            
+
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-sm font-bold text-muted">Message</label>
-              <textarea 
-                id="message" 
-                required 
+              <textarea
+                id="message"
+                required
                 rows={5}
                 className="bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors resize-none"
-                placeholder="How can we work together?"
+                placeholder="Tell me about your project or opportunity..."
               />
             </div>
 
-            <button 
-              type="submit" 
-              disabled={loading}
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-purple py-4 rounded-xl font-bold text-white hover:scale-[1.02] transition-transform shadow-[0_0_20px_rgba(59,130,246,0.3)] disabled:opacity-70 disabled:hover:scale-100"
-            >
-              {loading ? (
-                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-              ) : success ? (
-                "Message Sent ✓"
-              ) : (
-                <>Send Message <FaPaperPlane /></>
-              )}
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                disabled={loading}
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20 disabled:opacity-70 disabled:hover:translate-y-0"
+              >
+                {loading ? (
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                ) : success ? (
+                  "Message Sent ✓"
+                ) : (
+                  <>
+                    Send Message
+                    <FaPaperPlane className="text-xs" />
+                  </>
+                )}
+              </button>
+            </div>
           </form>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10">

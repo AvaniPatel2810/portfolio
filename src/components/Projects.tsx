@@ -70,7 +70,7 @@ export default function Projects() {
                 </div>
 
                 <h3 className="text-2xl font-black text-white mb-4">{project.title}</h3>
-                <p className="text-muted text-lg mb-8 leading-relaxed max-w-3xl">
+                <p className="text-muted text-lg mb-8 leading-relaxed max-w-xl">
                   {project.description}
                 </p>
               </div>

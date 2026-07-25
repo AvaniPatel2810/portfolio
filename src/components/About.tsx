@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const achievements = [
-  { title: "Enterprise AI", text: "Built workflow automation experiences for real business operations." },
-  { title: "Simulation Mindset", text: "Applied engineering fundamentals to model flight paths and analytics." },
-  { title: "Product Focus", text: "Designs software around clarity, usability, and measurable outcomes." },
+  { title: "AI Development ", text: "Built workflow automation experiences for real business operations." },
+  { title: "Continuous Learning", text: "Applied engineering fundamentals to model flight paths and analytics." },
+  { title: "Problem Solving", text: "Designs software around clarity, usability, and measurable outcomes." },
 ];
 
 export default function About() {
@@ -28,7 +28,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-panel p-8 rounded-2xl flex flex-col gap-6"
+            className="glass-panel p-8 rounded-xl flex flex-col gap-6"
           >
             <p className="text-muted text-lg leading-relaxed">
               Computer Engineering undergraduate at <strong className="text-white">Birla Vishvakarma Mahavidyalaya (BVM) Engineering College</strong> with experience in AI-powered automation, enterprise software development, and engineering simulations.
@@ -47,7 +47,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                className="glass-panel p-6 rounded-2xl border-l-2 border-l-purple"
+                className="glass-panel p-6 rounded-xl border-l-2 border-l-purple"
               >
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-muted text-sm">{item.text}</p>

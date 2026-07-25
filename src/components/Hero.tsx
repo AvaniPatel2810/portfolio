@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
 
-const WORDS = ['AI Engineer.', 'Backend Builder.', 'ML Enthusiast.', 'Problem Solver.'];
+const WORDS = [' Computer Engineering Student.', 'Backend Builder.', 'Full-Stack Developer.', 'Problem Solver.'];
 
 function useTypewriter(words: string[], speed = 80, pause = 2000) {
   const [text, setText] = useState('');
@@ -75,21 +75,6 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6 flex-1 min-w-0"
         >
-          {/* Available badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-3 glass-panel px-4 py-2 rounded-full w-fit"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-            </span>
-            <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
-              Available for opportunities
-            </span>
-          </motion.div>
 
           {/* Role + Name */}
           <div>
@@ -116,9 +101,9 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-xl md:text-3xl font-bold text-white h-10 flex items-center"
+              className="text-xl md:text-3l font-bold text-white h-10 flex items-center"
             >
-              <span className="text-blue-400">{typed}</span>
+              <span className="text-white-400">{typed}</span>
               <span className="ml-0.5 inline-block w-0.5 h-7 bg-blue-400 animate-[blink_1s_step-end_infinite]" />
             </motion.div>
           </div>
@@ -148,7 +133,7 @@ export default function Hero() {
               View Projects <FaArrowRight size={13} />
             </a>
             <a
-              href="/AvaniPatel.pdf"
+              href="/AvaniPatelResume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 glass-panel px-7 py-3.5 rounded-full font-bold text-white text-sm hover:bg-white/10 transition-colors"
@@ -185,7 +170,7 @@ export default function Hero() {
 
         {/* Right — floating stat cards */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
+          initial={{ opacity: 0, x: 3 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col gap-4 w-full lg:w-72 shrink-0"
